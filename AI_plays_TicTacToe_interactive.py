@@ -10,7 +10,6 @@ This notebook demonstrates how a simple **AI agent** can play TicTacToe against 
 We'll use a *magic square representation* of the 3×3 board to quickly check for winning combinations.
 
 AI will always play "X" and human "O".
-Let's start by defining the core constants and helper functions.
 
 # }}}
 """
@@ -31,25 +30,27 @@ print(f"==={15*'='}[[ Magic Square Representation ]]{15*'='}==\n")
 The classic 3×3 magic square:
 <table style="border-collapse: collapse; margin: 20px auto; font-size: 18px; text-align: center;">
   <tr>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>8</b></td>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>3</b></td>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>4</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>8</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>3</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>4</b></td>
   </tr>
   <tr>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>1</b></td>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>5</b></td>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>9</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>1</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>5</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>9</b></td>
   </tr>
   <tr>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>6</b></td>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>7</b></td>
-    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0;"><b>2</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>6</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>7</b></td>
+    <td style="border: 2px solid #333; width: 30px; height: 30px; background-color: #f0f0f0; color: black;"><b>2</b></td>
   </tr>
 </table>
 ensures that any winning line in TicTacToe (row, column, diagonal) sums to 15.
 
 This allows us to check wins using simple arithmetic instead of explicit board patterns.
 Each cell maps to its magic square value, enabling efficient win detection.
+
+Let's start by defining the core constants.
 
 """# }}}
 
@@ -181,10 +182,10 @@ If a winning move exists, it returns:
 - the **index** of the winning square, and
 - the **score** of the board position.
 
-#### Definition:
-**Score** of a board position is defined to be +1 for AI win and -1 for human win.
-
 Returns None if there's no winning moves.
+
+#### Definition:
+**Score** of a board position is defined to be +1 if AI has a winning strategy and -1 if human has a winning strategy.
 
 """# }}}
 
