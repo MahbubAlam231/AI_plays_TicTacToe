@@ -40,11 +40,13 @@ IPython
 
 ### Magic Square Representation
 ```
-8 | 3 | 4
----------
-1 | 5 | 9
----------
-6 | 7 | 2
+┌───┬───┬───┐
+│ 8 │ 3 │ 4 │
+├───┼───┼───┤
+│ 1 │ 5 │ 9 │
+├───┼───┼───┤
+│ 6 │ 7 │ 2 │
+└───┴───┴───┘
 ```
 
 Each position maps to a magic square value, enabling quick win detection by checking if any three positions sum to 15.
