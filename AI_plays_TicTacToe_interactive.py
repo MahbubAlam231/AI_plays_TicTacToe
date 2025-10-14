@@ -49,6 +49,7 @@ ensures that any winning line in TicTacToe (row, column, diagonal) sums to 15.
 
 This allows us to check wins using simple arithmetic instead of explicit board patterns.
 Each cell maps to its magic square value, enabling efficient win detection.
+See [my blog post](https://mahbubweb.github.io/posts/2025-09-27-ai-tictactoe/) for more explanation.
 
 Let's start by defining the core constants.
 
