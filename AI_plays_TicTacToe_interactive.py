@@ -269,7 +269,7 @@ def play_interactive():
     print("AI will play 'X', you play 'O'.\n")
 
     first = input("Do you want to play first? [Y/n] ")
-    player, opp = ("O", "X") if first != 'n' else ("X", "O")
+    player, opp = ("O", "X") if first.lower() != 'n' else ("X", "O")
     print(f"")
 
     out = widgets.Output()
