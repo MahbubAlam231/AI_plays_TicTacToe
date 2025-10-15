@@ -8,8 +8,8 @@ This project demonstrates an AI agent playing TicTacToe against a human player u
 
 ## Jupyter Notebook
 
-For a full walkthrough with code and interactive play, see the
-Jupyter Notebook [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)
+For a full walk-through with code and 🎮 play online (no setup required), see the Jupyter Notebook:
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)
 
 ---
 

@@ -8,7 +8,7 @@ This notebook demonstrates how a simple **AI agent** can play TicTacToe against 
 
 The 3x3 *magic square representation* helps to quickly check for winning combinations.
 
-**Find the game here if you don't have Jupyter notebook:** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)
+**🎮 Play online (no setup required):** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)
 **Run all cells, then find the game at the bottom.**
 Click to make your moves as ⭕, while the AI responds as <span style="color: #dc3545; font-size: 22px; font-weight: bold;">❌</span>.
 
