@@ -3,13 +3,14 @@
 Author      : Mahbub Alam
 File        : AI_plays_TicTacToe_interactive.py
 Created     : 2025-09
-Description : Interactive TicTacToe game with AI using magic square and minimax algorithm # {{{
+Description : # {{{
+This notebook demonstrates how a simple **AI agent** can play TicTacToe against a human using the **minimax algorithm** combined with a clever **magic square representation** to make optimal moves.
 
-This notebook demonstrates how a simple **AI agent** can play TicTacToe against a human using the **minimax algorithm**.
+The 3x3 *magic square representation* helps to quickly check for winning combinations.
 
-We'll use a *magic square representation* of the 3×3 board to quickly check for winning combinations.
-
-AI will always play "X" and human "O".
+**Find the game here if you don't have Jupyter notebook:** [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)
+**Run all cells, then find the game at the bottom.**
+Click to make your moves as ⭕, while the AI responds as <span style="color: #dc3545; font-size: 22px; font-weight: bold;">❌</span>.
 
 # }}}
 """
@@ -250,8 +251,9 @@ print(f"==={18*'='}[[ Interactive TicTacToe ]]{18*'='}==\n")
 
 """# {{{
 
-Now play the game! Click cells to make your move as ⭕ while the AI plays as <span style="color: #dc3545; font-size: 25px; font-weight: bold;">❌</span>.
+Now play the game! Open this notebook in your Jupyter Notebook (or [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MahbubAlam231/AI_plays_TicTacToe/main?filepath=AI_plays_TicTacToe_interactive.ipynb)) and run all code blocks.
 
+Click cells to make your move as ⭕ while the AI plays as <span style="color: #dc3545; font-size: 22px; font-weight: bold;">❌</span>.
 The AI uses the minimax algorithm, so it plays optimally - try to get a draw! 🎮
 
 """# }}}
@@ -265,7 +267,6 @@ def play_interactive():
     print(68 * "=")
     print(f"==={'='*14}[[ Welcome to AI plays TicTacToe ]]{'='*14}==\n")
     print("AI will play 'X', you play 'O'.\n")
-    print(f"Run the above cell(s) to start playing.\n")
 
     first = input("Do you want to play first? [Y/n] ")
     player, opp = ("O", "X") if first != 'n' else ("X", "O")

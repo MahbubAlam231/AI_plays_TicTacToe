@@ -96,34 +96,45 @@ def main():
     while True:
         if player == "X":
             print("\nThis is AI's turn.\n")
-            sleep(0.5)
+            sleep(0.3)
             res_x = check_player_win(board, "X")
             res_o = check_player_win(board, "O")
             if res_x is not None:
                 move_index = res_x[0]
-                # print(f"Above board score: {res_x[1]}\n")
+                print(f"Above board score: {res_x[1]}\n")
                 board[move_index] = "X"
                 print_board(board)
                 print("\nAI wins!")
                 break
             elif res_o is not None:
                 move_index = res_o[0]
-                # print(f"Above board score: {res_o[1]}\n")
+                print(f"Above board score: {res_o[1]}\n")
             else:
                 move_index, score_ = minimax(board, "X", "O")
-                # print(f"Above board score: {- score_}\n")
+                print(f"Above board score: {- score_}\n")
 
             board[move_index] = "X"
         else:
             print("\nThis is your turn.\n")
             while True:
-                input_ = input(f"Make moves as (x, y)-coordinates (0, 1, 2): ")
-                x, y = map(int, tuple(input_.replace(' ', '').replace(',', '')))
-                move_index = 3*x + y
-                if board[move_index] != "_":
-                    print("That spot is already taken! Try again.\n")
-                else:
-                    break
+                input_ = input(f"Make moves as (x, y)-coordinates (allowed input examples, '1, 0' or '02'): ")
+                try:
+                    x, y = map(int, tuple(input_.replace(' ', '').replace(',', '')))
+                    move_index = 3*x + y
+                    if board[move_index] != "_":
+                        print(f"\n\
+                              ===========================================\n\
+                              #  That spot is already taken! Try again  #\n\
+                              ===========================================\n\
+                              \n")
+                    else:
+                        break
+                except:
+                    print(f"\n\
+                          ==============================\n\
+                          #  Invalid input! Try again  #\n\
+                          ==============================\n\
+                          \n")
 
             board[move_index] = "O"
             print(f"")
