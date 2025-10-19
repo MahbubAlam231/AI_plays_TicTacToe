@@ -214,6 +214,7 @@ Minimax algorithm for optimal AI move selection.
 
 Algorithm:
         Recursively explores all possible game states assuming optimal play.
+
         - X (AI) maximizes the score (+1 for win)
         - O (human) minimizes the score (-1 for win)
         - Returns (move, score): score of a board position and a move that achieves that score
