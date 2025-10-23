@@ -224,13 +224,13 @@ Algorithm:
 
 
 def minimax(board, player, opp):
-    res = check_player_win(board, player)
-    if res is not None:
-        return res
-
     avail_moves_ = avail_moves(board)
     if not avail_moves_:
         return None, 0
+
+    res = check_player_win(board, player)
+    if res is not None:
+        return res
 
     scores = []
     for i in avail_moves_:
